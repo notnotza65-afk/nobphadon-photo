@@ -86,7 +86,7 @@
     .hero {
       height: 100vh;
       background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-                  url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+                  url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -438,11 +438,11 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (ใส่ ID รองรับการดึงข้อมูล) -->
   <section class="hero" id="home">
     <p class="label">Photography Studio</p>
-    <h1>บันทึกทุกความทรงจำให้เป็นรูปภาพ</h1>
-    <p class="sub">ช่างภาพงานแต่งงาน พอร์ตเทรต สินค้า และอีเวนต์ ที่เข้าใจความรู้สึกในทุกช็อต</p>
+    <h1 id="hero-title">บันทึกทุกความทรงจำให้เป็นรูปภาพ</h1>
+    <p class="sub" id="hero-desc">ช่างภาพงานแต่งงาน พอร์ตเทรต สินค้า และอีเวนต์ ที่เข้าใจความรู้สึกในทุกช็อต</p>
     <div class="hero-buttons">
       <a href="#portfolio" class="btn">ดูผลงาน</a>
       <a href="#contact" class="btn-outline">ติดต่อสอบถาม</a>
@@ -470,7 +470,7 @@
         <div class="overlay"><h3>สินค้า</h3></div>
       </div>
       <div class="category-card">
-        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="Food">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Food">
         <div class="overlay"><h3>อาหาร</h3></div>
       </div>
     </div>
@@ -488,7 +488,7 @@
       <div class="slider-track" id="sliderTrack">
         <div class="slider-item">
           <div class="slider-card">
-            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80" alt="Wedding">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80" alt="Wedding">
             <div class="caption">
               <h4>Wedding Ceremony</h4>
               <span>Bangkok</span>
@@ -497,7 +497,7 @@
         </div>
         <div class="slider-item">
           <div class="slider-card">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Portrait">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80" alt="Portrait">
             <div class="caption">
               <h4>Personal Portrait</h4>
               <span>Studio Session</span>
@@ -506,7 +506,7 @@
         </div>
         <div class="slider-item">
           <div class="slider-card">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Product">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Product">
             <div class="caption">
               <h4>Product Shoot</h4>
               <span>Brand Campaign</span>
@@ -515,28 +515,10 @@
         </div>
         <div class="slider-item">
           <div class="slider-card">
-            <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=800&q=80" alt="Food">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Food">
             <div class="caption">
               <h4>Food Photography</h4>
               <span>Restaurant Menu</span>
-            </div>
-          </div>
-        </div>
-        <div class="slider-item">
-          <div class="slider-card">
-            <img src="https://images.unsplash.com/photo-1520854221256-17451cc330e7?auto=format&fit=crop&w=800&q=80" alt="Outdoor Wedding">
-            <div class="caption">
-              <h4>Outdoor Wedding</h4>
-              <span>Chiang Mai</span>
-            </div>
-          </div>
-        </div>
-        <div class="slider-item">
-          <div class="slider-card">
-            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80" alt="Fashion">
-            <div class="caption">
-              <h4>Fashion Portrait</h4>
-              <span>Editorial</span>
             </div>
           </div>
         </div>
@@ -568,7 +550,7 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact (ใส่ ID รองรับลิงก์ติดต่อจากแอดมิน) -->
   <section id="contact">
     <div class="contact">
       <h2>พร้อมถ่ายทอดเรื่องราวของคุณ</h2>
@@ -576,22 +558,22 @@
       <div class="contact-info">
         <div>
           <strong>Facebook</strong>
-          <a href="https://facebook.com/nobphadonphoto" target="_blank">Nobphadon Photo</a>
+          <a id="fb-link" href="https://facebook.com/nobphadonphoto" target="_blank">Nobphadon Photo</a>
         </div>
         <div>
           <strong>Line</strong>
-          <a href="https://line.me/ti/p/~nobphadonphoto" target="_blank">@nobphadonphoto</a>
+          <a id="line-link" href="https://line.me/ti/p/~nobphadonphoto" target="_blank">@nobphadonphoto</a>
         </div>
       </div>
-      <a href="https://line.me/ti/p/~nobphadonphoto" target="_blank" class="btn">ทักแชท Line หาช่างภาพ</a>
+      <a id="line-btn-link" href="https://line.me/ti/p/~nobphadonphoto" target="_blank" class="btn">ทักแชท Line หาช่างภาพ</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="social">
-      <a href="https://facebook.com/nobphadonphoto" target="_blank">Facebook</a>
-      <a href="https://line.me/ti/p/~nobphadonphoto" target="_blank">Line</a>
+      <a id="footer-fb" href="https://facebook.com/nobphadonphoto" target="_blank">Facebook</a>
+      <a id="footer-line" href="https://line.me/ti/p/~nobphadonphoto" target="_blank">Line</a>
     </div>
     <p>&copy; 2026 Nobphadon Photo. All rights reserved.</p>
   </footer>
@@ -627,20 +609,47 @@
       track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 
-    // เลื่อนอัตโนมัติทุกๆ 3.5 วินาที
     let autoSlide = setInterval(() => {
       moveSlide(1);
     }, 3500);
 
-    // หยุดเลื่อนอัตโนมัติเมื่อเอาเมาส์วางบนสไลเดอร์
     const container = document.querySelector('.slider-container');
     container.addEventListener('mouseenter', () => clearInterval(autoSlide));
     container.addEventListener('mouseleave', () => {
       autoSlide = setInterval(() => moveSlide(1), 3500);
     });
 
-    // ปรับตำแหน่งใหม่เมื่อเปลี่ยนขนาดหน้าจอ
     window.addEventListener('resize', updateSliderPosition);
+  </script>
+
+  <!-- โค้ดดึงข้อมูลจาก Decap CMS มาแสดงผลหน้าเว็บอัตโนมัติ -->
+  <script>
+    // ดึงข้อมูล Hero (หัวข้อและรายละเอียด)
+    fetch('content/settings/hero.json')
+      .then(response => response.json())
+      .then(data => {
+        if (data.title) document.getElementById('hero-title').innerText = data.title;
+        if (data.description) document.getElementById('hero-desc').innerText = data.description;
+      })
+      .catch(err => console.log('Hero data not loaded yet'));
+
+    // ดึงข้อมูล Contact (ช่องทางติดต่อ)
+    fetch('content/settings/contact.json')
+      .then(response => response.json())
+      .then(data => {
+        if (data.fb_link) {
+          document.getElementById('fb-link').href = data.fb_link;
+          document.getElementById('footer-fb').href = data.fb_link;
+          if (data.fb_name) document.getElementById('fb-link').innerText = data.fb_name;
+        }
+        if (data.line_link) {
+          document.getElementById('line-link').href = data.line_link;
+          document.getElementById('line-btn-link').href = data.line_link;
+          document.getElementById('footer-line').href = data.line_link;
+          if (data.line_name) document.getElementById('line-link').innerText = data.line_name;
+        }
+      })
+      .catch(err => console.log('Contact data not loaded yet'));
   </script>
 
 </body>
