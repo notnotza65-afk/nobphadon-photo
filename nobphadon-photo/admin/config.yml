@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "gallery"
+    label: "ผลงานล่าสุด"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ชื่อผลงาน / สถานที่", name: "title", widget: "string" }
+      - { label: "ประเภทงาน", name: "category", widget: "string" }
+      - { label: "รูปภาพผลงาน", name: "image", widget: "image" }
