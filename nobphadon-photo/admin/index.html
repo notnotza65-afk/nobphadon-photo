@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-</body>
-</html>
+<script>
+  // ดึงข้อมูลข้อความแนะนำตัว
+  fetch('content/settings/hero.json')
+    .then(response => response.json())
+    .then(data => {
+      if (data.title) document.getElementById('hero-title').innerText = data.title;
+      if (data.description) document.getElementById('hero-desc').innerText = data.description;
+    })
+    .catch(err => console.log('Hero data not found'));
+
+  // ดึงข้อมูลช่องทางติดต่อ
+  fetch('content/settings/contact.json')
+    .then(response => response.json())
+    .then(data => {
+      if (data.fb_link) {
+        const fbEl = document.getElementById('fb-link');
+        fbEl.href = data.fb_link;
+        if (data.fb_name) fbEl.innerText = data.fb_name;
+      }
+      if (data.line_link) {
+        const lineEl = document.getElementById('line-link');
+        lineEl.href = data.line_link;
+        if (data.line_name) lineEl.innerText = data.line_name;
+      }
+    })
+    .catch(err => console.log('Contact data not found'));
+</script>
