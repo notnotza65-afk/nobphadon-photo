@@ -25,9 +25,8 @@ collections:
         fields:
           - { label: "หัวข้อหลัก", name: "title", widget: "string" }
           - { label: "ข้อความรายละเอียด", name: "description", widget: "text" }
-      
       - file: "content/settings/contact.json"
-        label: "📞 ส่วนช่องทางติดต่อ (ด้านล่างสุด)",
+        label: "📞 ส่วนช่องทางติดต่อ (ด้านล่างสุด)"
         name: "contact"
         fields:
           - { label: "ชื่อ Facebook", name: "fb_name", widget: "string" }
