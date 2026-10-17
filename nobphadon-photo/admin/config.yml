@@ -7,11 +7,30 @@ public_folder: "/images"
 
 collections:
   - name: "gallery"
-    label: "ผลงานล่าสุด"
+    label: "📸 จัดการรูปภาพผลงาน"
     folder: "content/gallery"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "ชื่อผลงาน / สถานที่", name: "title", widget: "string" }
-      - { label: "ประเภทงาน", name: "category", widget: "string" }
+      - { label: "ประเภทงาน (หมวดหมู่)", name: "category", widget: "string" }
       - { label: "รูปภาพผลงาน", name: "image", widget: "image" }
+
+  - name: "settings"
+    label: "⚙️ ตั้งค่าข้อความและติดต่อ"
+    files:
+      - file: "content/settings/hero.json"
+        label: "📝 ส่วนข้อความแนะนำตัว (หน้าเว็บ)"
+        name: "hero"
+        fields:
+          - { label: "หัวข้อหลัก", name: "title", widget: "string" }
+          - { label: "ข้อความรายละเอียด", name: "description", widget: "text" }
+      
+      - file: "content/settings/contact.json"
+        label: "📞 ส่วนช่องทางติดต่อ (ด้านล่างสุด)",
+        name: "contact"
+        fields:
+          - { label: "ชื่อ Facebook", name: "fb_name", widget: "string" }
+          - { label: "ลิงก์ Facebook", name: "fb_link", widget: "string" }
+          - { label: "ชื่อ Line", name: "line_name", widget: "string" }
+          - { label: "ลิงก์ Line", name: "line_link", widget: "string" }
